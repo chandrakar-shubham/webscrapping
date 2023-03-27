@@ -28,6 +28,14 @@ title = soup.title
 
 #4. Comment
 
+markup = "<p> <!- comment --> </p>"
+comm = BeautifulSoup(markup)
+#print(comm)
+
+print(type(comm.p.string))
+
+
+
 #Get all the paragraphs from the page
 
 paras = soup.find_all('p')
@@ -65,6 +73,6 @@ for link in anchors:
     if link.get('href')!='#':
         lnk = url + link.get('href')
         all_links.add(lnk)
-        print(lnk)
+        #print(lnk)
     
 
